@@ -5,31 +5,40 @@ function addButtonsToInputs() {
 
   formInputs.forEach((input) => {
     // Verificar si el input tiene el atributo data-type con valor "show"
+    // Verificar si el input tiene el atributo data-type con valor "show"
     if (input.getAttribute('type') === 'hidden') {
-      return; // Si es así, no agregamos los botones y pasamos al siguiente input
-    }
-
-    const buttonContainer = document.createElement('div');
-    buttonContainer.style.display = 'inline-block';
-
-    const button = document.createElement('button');
-    button.textContent = 'Rellenar';
-    button.classList.add('classRefillForm'); // Agregar clase específica
-
-    buttonContainer.appendChild(button);
-
-    const saveButton = document.createElement('button');
-    saveButton.textContent = 'Guardar';
-    saveButton.classList.add('classRefillForm'); // Agregar clase específica
-
-    buttonContainer.appendChild(saveButton);
-
-    const deleteButton = document.createElement('button');
-    deleteButton.textContent = 'Eliminar';
-    deleteButton.classList.add('classRefillForm'); // Agregar clase específica
-
-    buttonContainer.appendChild(deleteButton);
-
+        return; // Si es así, no agregamos los botones y pasamos al siguiente input
+      }
+  
+      const buttonContainer = document.createElement('div');
+      buttonContainer.style.display = 'inline-block';
+  
+      const button = document.createElement('button');
+      button.textContent = 'Rellenar';
+      button.classList.add('classRefillForm'); // Agregar clase específica
+      button.style.backgroundColor = '#2F80ED'; // Color de fondo del botón
+      button.style.color = '#fff'; // Color del texto del botón
+      button.style.height = '40px'; // Altura del botón
+  
+      buttonContainer.appendChild(button);
+  
+      const saveButton = document.createElement('button');
+      saveButton.textContent = 'Guardar';
+      saveButton.classList.add('classRefillForm'); // Agregar clase específica
+      saveButton.style.backgroundColor = '#27AE60'; // Color de fondo del botón
+      saveButton.style.color = '#fff'; // Color del texto del botón
+      saveButton.style.height = '40px'; // Altura del botón
+  
+      buttonContainer.appendChild(saveButton);
+  
+      const deleteButton = document.createElement('button');
+      deleteButton.textContent = 'Eliminar';
+      deleteButton.classList.add('classRefillForm', 'delete'); // Agregar clase específica y 'delete'
+      deleteButton.style.backgroundColor = '#FF0000'; // Color de fondo del botón
+      deleteButton.style.color = '#fff'; // Color del texto del botón
+      deleteButton.style.height = '40px'; // Altura del botón
+  
+      buttonContainer.appendChild(deleteButton);
     input.insertAdjacentElement('afterend', buttonContainer);
 
     saveButton.addEventListener('click', () => {

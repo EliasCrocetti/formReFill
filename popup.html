@@ -50,6 +50,10 @@
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
 
+    .classRefillForm:hover {
+      background-color: #0063cc;
+    }
+
     #statusText {
       text-align: center;
       font-weight: bold;
@@ -60,11 +64,11 @@
 </head>
 
 <body>
-  <h3>Extensi&oacute;n Form ReFill</h3>
+  <h3>Extensión Form ReFill</h3>
   <div class="button-container">
     <button id="addButton" hidden>Agregar Input</button>
-    <button id="hideButton">Ocultar</button>
-    <button id="showButton" style="display: none;">Mostrar</button>
+    <button id="hideButton" class="classRefillForm">Ocultar</button>
+    <button id="showButton" style="display: none;" class="classRefillForm">Mostrar</button>
   </div>
   <div id="statusText">Mostrandose</div>
   <script src="popup.js"></script>
