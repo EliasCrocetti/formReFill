@@ -1,5 +1,5 @@
 {
-  "name": "form",
+  "name": "Refill Form",
   "version": "1.0.0",
   "description": "Una extensión para detectar formularios y agregar botones que te Rellenan la data.",
   "manifest_version": 3,
